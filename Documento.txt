@@ -1,0 +1,5 @@
+15:17 04/02/2019 documentação Projeto Aula de PHP Udemy - HCODE
+
+Foi criada a classe chamada SQL(arquivo sql.php) que conversa com o banco.
+Há uma classe também criada para coversar com o cadastro de cliente(arquivo .php).
+vamos fazer a classe sql conversar com outra classe vamos cria a classe usuário (arquivo usuario.php)
