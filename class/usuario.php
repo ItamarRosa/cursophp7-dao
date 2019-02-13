@@ -117,6 +117,24 @@ class Usuario {
 	}
 
 
+//metodo para apagar dados do usuario.
+	public function delete(){
+
+		$sql = new sql();
+
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+			':ID'=>$this->getIdusuario()
+		)); //instancia do banco da dados.
+
+
+		$this->setIdusuario(0);
+		$this->setDeslogin("");
+		$this->setDessenha("");
+		$this->setDtcadastro(new DateTime());
+	}
+
+
+
 //metodo criado abaixo para realizar update (alteração) dos usuarios. Os parametros são passados no própio método chamado update para serem preenchidos no detro da query. Outra coisa, como está sendo colocado denntro da query  a partir  do getDeslogin e o do getDessenha e então vamos definílas dentro do Objeto.
 public function update($login, $password){
 
